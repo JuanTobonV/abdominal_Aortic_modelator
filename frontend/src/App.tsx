@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import FileUploader from './components/FileUploader'
 import Viewer3D from './components/Viewer3D'
-import './App.css'
+import './App'
 
 function App() {
   const [modelUrl, setModelUrl] = useState<string | null>(null)
