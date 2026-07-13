@@ -128,8 +128,9 @@ export default function Viewer3D({ url, modelType }: Viewer3DProps) {
       requestAnimationFrame(animate)
 
       // Apply rotation
+      // Aplica la rotación solo si es un Mesh
       scene.children.forEach((child) => {
-        if (child instanceof THREE.Mesh && child !== ambientLight && child !== directionalLight && child !== pointLight) {
+        if (child instanceof THREE.Mesh) {
           child.rotation.x = rotationX
           child.rotation.y = rotationY
         }
